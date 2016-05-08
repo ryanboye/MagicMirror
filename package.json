@@ -42,11 +42,12 @@
     "feedme": "latest",
     "iconv-lite": "latest",
     "moment": "latest",
-    "request": "latest",
+    "request": "^2.72.0",
+    "rrule": "latest",
     "snyk": "latest",
     "socket.io": "latest",
     "valid-url": "latest",
     "walk": "latest",
-    "rrule": "latest"
+    "xml2js": "^0.4.16"
   }
 }
