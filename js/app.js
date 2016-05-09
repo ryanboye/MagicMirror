@@ -41,7 +41,7 @@ var App = function() {
 			var config = Object.assign(defaults, c);
 			callback(config);
 		} catch (e) {
-			console.error("WARNING! Could not find config. Please create one.");
+			console.error("WARNING! Could not find config. Please create one.");			
 			callback(defaults);
 		}
 	};
@@ -65,7 +65,7 @@ var App = function() {
 
 		var loadModule = true;
 		try {
-			fs.accessSync(helperPath, fs.R_OK);
+			fs.accessSync(helperPath, fs.R_OK);			
 		} catch (e) {
 			loadModule = false;
 			console.log("No helper found for module: " + moduleName + ".");

@@ -7,17 +7,12 @@ Module.register("nextbus",{
         text: "No available busses"
     },
     start: function(){
-        var self = this;
-        setInterval(function(){
-            console.log('pinging node..')
-            self.sendSocketNotification("PING TEST", "yoooo");
-        }, 1000);
+
     },
     // Override dom generator.
     getDom: function() {
         var domWrapper = document.createElement("div");        
-        genDom(domWrapper);
-        Log.log("HELP ME PLEASE");
+        genDom(domWrapper);        
         return domWrapper;
     },
     socketNotificationReceived: function(notification, payload) {
@@ -32,8 +27,9 @@ Module.register("nextbus",{
                 break;
         }
 
+        Log.log(notification);
         Log.log(this.name + " received a socket notification: " + notification + " - Payload: " + payload);
-    }, 
+    }    
 });
 
 function genDom(parent){
